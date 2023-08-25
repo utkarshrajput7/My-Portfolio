@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CDN link for changing text -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- CDN link for icons -->
+    <script src="https://kit.fontawesome.com/6a8305c6a0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <!-- ----------------------------------------Home-------------------------------------------------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/portfolio-logo-removebg-preview.png">
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#profiles">Coding Profiles</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hello! I'm <span id="myname">Utkarsh,</span></h1>
+                <p>&nbsp;And I am a</p>
+                <h1><span class="changingText"></span></h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -------------------------------------About Me------------------------------------------------------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/WhatsApp Image 2023-08-07 at 00.41.47.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('other')">Other Interests</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Skills</span><br>
+                                <span style="color: #fff;">C++, Data Structures and Algorithms,
+                                    MySQL(Basics),<br>Object Oriented Programming</span>
+                            </li>
+                            <li><span>Development Skills</span><br>
+                                <span style="color: #fff;">HTML, CSS, JavaScript</span>
+                            </li>
+                            <li><span>Computer Science Fundamentals(Basics)</span><br>
+                                <span style="color: #fff;">DataBase Management System,
+                                    Operating Systems,<br>Computer Networks</span>
+                            </li>
+                            <li><span>Soft Skills</span><br>
+                                <span style="color: #fff;">Communication, Team Work, Quick Learning</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span style="font-size: 24px;">OctaNet - Summer InternShip</span><br><span
+                                    style="font-style: italic;color: #fff; font-size: 10px;">01/06/2023 -
+                                    30/06/2023</span><br>It was a
+                                virtual internship program, in which I have made several Frontend projects, which helped
+                                me to sharpen my skills and gain experience about how to apply the attained skills into
+                                real world.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B. Tech. (Computer Science and Engineering)</span><br><span
+                                    style="color: #fff; font-size: 14px;">National Institute of
+                                    Technology, Raipur</span><br><span style="color: #fff; font-size: 10px;"><i>2020 -
+                                        Present</i><br>CPI till 6th semester: 7.95</span>
+                            </li>
+                            <li><span>Higher Secondary Education</span><br><span
+                                    style="color: #fff; font-size: 14px;">Dronacharya Public School,
+                                    Raipur</span><br><span style="color: #fff; font-size: 10px;">CBSE
+                                    <i>(2019)</i> : <b>91.4%</b></span>
+                            </li>
+                            <li><span>Secondary Education</span><br><span style="color: #fff; font-size: 14px;">St.
+                                    Joseph's School,
+                                    Baikunthpur</span><br><span style="color: #fff; font-size: 10px;">CBSE
+                                    <i>(2017)</i> : <b>CPI 10</b></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="other">
+                        <ul>
+                            <li><span style="color: #fff;">Coding</span></li>
+                            <li><span style="color: #fff;">Web Development</span></li>
+                            <li><span style="color: #fff;">Aptitude Problem Solving</span></li>
+                            <li><span style="color: #fff;">Mathematics</span></li>
+                            <li><span style="color: #fff;">Teaching</span></li>
+                            <li><span style="color: #fff;">Cricket</span></li>
+                            <li><span style="color: #fff;">Music(Hip-Hop)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------------------------------------- MyCoding Profiles---------------------------------------------------------------->
+
+    <div id="profiles">
+        <div class="container">
+            <h1 class="sub-title">My Coding Profiles</h1>
+            <div class="profiles-list">
+                <div>
+                    <a href="https://leetcode.com/Utkarsh0301/" target="_blank"><i
+                            class="fa-solid fa-code-merge fa-flip-horizontal fa-2xl"></i>
+                        <h2>LeetCode</h2>
+                        <p>
+                            I practice most of the Data Structures and Algorithms questions at LeetCode. <br> Here I
+                            have
+                            solved
+                            <span style="color: aqua;">700+ problems</span> and have <span style="color: aqua;">1780+
+                                Contest Rating</span>.
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.codechef.com/users/utkarshrajput7" target="_blank"><i
+                            class="fa-regular fa-closed-captioning fa-2xl"></i>
+                        <h2>CodeChef</h2>
+                        <p>
+                            Sometimes I do some Competitive Programming at CodeChef. <br> Here I have <span style="color: aqua;">3⭐ Contest Rating</span>.
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://auth.geeksforgeeks.org/user/utkarshrayt6w/practice" target="_blank"><i
+                            class="fa-brands fa-gg fa-2xl"></i>
+                        <h2>GFG</h2>
+                        <p>
+                            I practice most of the standard Algorithms and standard DSA problems at GeeksForGeeks.
+                            <br> Here I have solved <span style="color: aqua;">550+ problems</span>.
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.codingninjas.com/studio/profile/Utkarsh0301" target="_blank"><i
+                            class="fa-brands fa-free-code-camp fa-2xl"></i>
+                        <h2>CodeStudio</h2>
+                        <p>
+                            I practice most of the Basic and Conceptual problems at CodeStudio.
+                            <br> Here I have solved 277+ problems and earned <span style="color: aqua;">5 Samurai and 4 Ronin Badges</span>.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- -------------------------------------Projects------------------------------------------------------------------->
+
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+
+                <div class="project">
+                    <img src="images/rpr.png">
+                    <div class="layer">
+                        <h3>Weather-Info</h3>
+                        <p>
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eum explicabo quas doloremque
+                            qui
+                            beatae dolores dolore vel itaque adipisci. -->
+                        </p>
+                        <a href="https://weather-info-by-utkarsh.netlify.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="images/mtnum.png">
+                    <div class="layer">
+                        <h3>Match-the-Numbers</h3>
+                        <p>
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eum explicabo quas doloremque
+                            qui
+                            beatae dolores dolore vel itaque adipisci. -->
+                        </p>
+                        <a href="https://match-the-numbers.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="images/tdl.png">
+                    <div class="layer">
+                        <h3>To-Do-List</h3>
+                        <p>
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eum explicabo quas doloremque
+                            qui
+                            beatae dolores dolore vel itaque adipisci. -->
+                        </p>
+                        <a href="https://utkarshrajput7.github.io/To-Do-List/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="https://github.com/utkarshrajput7?tab=repositories" class="btn" target="_blank">See More</a>
+        </div>
+    </div>
+
+
+
+
+    <!-- -------------------------------------Contack Me------------------------------------------------------------------->
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>utkarshrajput0301@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>8349527384</p>
+                    <div class="social-icons">
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-square-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rapcode_7/" target="_blank">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="https://github.com/utkarshrajput7" target="_blank">
+                            <i class="fa-brands fa-square-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/utkarsh-singh-233ab4242/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <a href="images/Utkarsh's Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="copyright">
+            <p>Copyright &copy; Utkarsh.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <!-- ----------------------Script for Google Sheet--------------------------------- -->
+
+    <!-- Google Sheet Link: https://docs.google.com/spreadsheets/d/1yIJMyILxSEtrjKNmed_6CnH7onQj7_0RoEPvPuTt-Sg/edit#gid=0 -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw1za4ohshnacIYORuw1AxVKr6OB44kTEApLrG0bz9nOa7Y8UJ-4NX8rbSJcLZh1D5a9w/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                method: 'POST', body: new FormData(form) 
+            })
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully!"
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 4000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

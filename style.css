@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* ----------------------------------------------Home------------------------------------------------------------- */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/homepageimage.png);
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: 1500px 1000px;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+nav img{
+    height: 60px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    bottom: -6px;
+    width: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after{
+    opacity: 100%;
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+
+#myname{
+    color: #ff004f;
+}
+.changingText{
+    color: #ff004f;
+}
+
+
+/* --------------------------------------------About Me------------------------------------------------------------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{ 
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 40px 0 40px ; /* top  rightleft  bottom */
+}
+.tab-links{
+    margin-right: 60px;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff004f;
+}
+.tab-links::after{
+    content: '';
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+.tab-links.active-link::after{
+    opacity: 100%;
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 16px 0;
+}
+.tab-contents ul li span{
+    color:#d7a9ff;
+    font-size: 15px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+/* --------------------------------------------My Coding Profiles------------------------------------------------------------- */
+
+#profiles{
+    padding: 20px 0;
+}
+
+.profiles-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap:22px;
+    margin-top: 50px;
+}
+
+.profiles-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s ;
+}
+
+.profiles-list div i{
+    color: #d7a9ff;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.profiles-list div h2{
+    /* color: #ff004f; */
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.profiles-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.profiles-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+
+
+/* --------------------------------------------Projects-------------------------------------------------------------------- */
+#projects{
+    padding: 50px 0;
+}
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project{
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.project img{
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+    height: 100%;
+}
+.layer{
+    width: 100%;
+    height: 0;  /* */
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    
+    font-size: 15px;
+    
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+}
+.project:hover img{
+    transform: scale(1.1); /**/
+}
+.project:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    border-radius: 8px;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background 0.4s;
+}
+.btn:hover{
+    background: #770f30;
+}
+
+
+
+
+
+/* --------------------------------------------Contact-------------------------------------------------------------------- */
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.btn.btn2:hover{
+    transform: scale(1.1);
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+}
+form .btn2{
+    padding: 14px 60px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    background: #262626;
+    padding: 25px 0;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+
+
+/* ------------------------------------CSS for Smaller Screen------------------------------------------------------------ */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    #header{
+        background: #000;
+    }
+    .header-text{
+        margin-top: 333px;
+        font-size: 14px;
+    }
+    .header-text h1{
+        font-size: 22px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        opacity: 90%;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        padding-top: 50px;
+        width: 200px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -35px;
+    display: block;
+}
